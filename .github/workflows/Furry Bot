@@ -1,3 +1,14 @@
+import discord
+from discord.ext import commands
+
+bot = commands.Bot(command_prefix='!')
+
+@bot.command()
+async def ping(ctx):
+    await ctx.send('pong')
+
+bot.run('token')
+
 API_ENDPOINT = 'https://discordapp.com/api/v6'
 CLIENT_ID = '654396778380001300'
 CLIENT_SECRET = 'D3S8LEuOxxDm6d1MM5o7be1w95NjHJJl'
