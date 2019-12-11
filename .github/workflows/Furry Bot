@@ -24,7 +24,48 @@ def exchange_code(code):
   "expires_in": 604800,
   "refresh_token": "D43f5y0ahjqew82jZ4NViEr2YafMKhue",
   "scope": "identify"
+}{
+  "token_type": "Bearer",
+  "guild": {
+    "mfa_level": 0,
+    "emojis": [],
+    "application_id": null,
+    "name": "SomeTest",
+    "roles": [
+      {
+        "hoist": false,
+        "name": "@everyone",
+        "mentionable": false,
+        "color": 0,
+        "position": 0,
+        "id": "290926798626357250",
+        "managed": false,
+        "permissions": 49794241
+      }
+    ],
+    "afk_timeout": 300,
+    "system_channel_id": null,
+    "widget_channel_id": null,
+    "region": "us-east",
+    "default_message_notifications": 1,
+    "embed_channel_id": null,
+    "explicit_content_filter": 0,
+    "splash": null,
+    "features": [],
+    "afk_channel_id": null,
+    "widget_enabled": false,
+    "verification_level": 0,
+    "owner_id": "53908232999183680",
+    "embed_enabled": false,
+    "id": "2909267986347357250",
+    "icon": null
+  },
+  "access_token": "zMndOe7jFLXGawdlxMOdNvXjjOce5X",
+  "scope": "bot",
+  "expires_in": 604800,
+  "refresh_token": "mgp8qnvBwJcmadwgCYKyYD5CAzGAX4"
 }
+
 static void UpdatePresence()
 {
     DiscordRichPresence discordPresence;
