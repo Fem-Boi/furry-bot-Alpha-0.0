@@ -1,3 +1,30 @@
+API_ENDPOINT = 'https://discordapp.com/api/v6'
+CLIENT_ID = '654396778380001300'
+CLIENT_SECRET = 'D3S8LEuOxxDm6d1MM5o7be1w95NjHJJl'
+REDIRECT_URI = 'https://nicememe.website'
+
+def exchange_code(code):
+  data = {
+    'client_id': CLIENT_ID,
+    'client_secret': CLIENT_SECRET,
+    'grant_type': 'authorization_code',
+    'code': code,
+    'redirect_uri': REDIRECT_URI,
+    'scope': 'identify email connections'
+  }
+  headers = {
+    'Content-Type': 'application/x-www-form-urlencoded'
+  }
+  r = requests.post('%s/oauth2/token' % API_ENDPOINT, data=data, headers=headers)
+  r.raise_for_status()
+  return r.json()
+{
+  "access_token": "6qrZcUqja7812RVdnEKjpzOL4CvHBFG",
+  "token_type": "Bearer",
+  "expires_in": 604800,
+  "refresh_token": "D43f5y0ahjqew82jZ4NViEr2YafMKhue",
+  "scope": "identify"
+}
 static void UpdatePresence()
 {
     DiscordRichPresence discordPresence;
