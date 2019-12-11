@@ -1,0 +1,12 @@
+name: CI FUrry bot
+
+on:
+  pull_request:
+    branches:
+    - master
+    - master
+- name: Setup Node
+  uses: actions/setup-node@v1
+  with:
+    node-version: '10.x'
+
