@@ -24,4 +24,4 @@ class Furbot(discord.Client):
 
 print('Starting...')
 http = aiohttp.ClientSession()
-FrostCleverbot().run(os.environ['BOT_TOKEN'] or 'PUT DISCORD BOT TOKEN HERE')
+furbot().run(os.environ['BOT_TOKEN'] or 'zMndOe7jFLXGawdlxMOdNvXjjOce5X')
