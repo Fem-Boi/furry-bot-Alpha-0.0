@@ -1,1 +1,361 @@
+a name="4.4.8" />
 
+# 4.4.8 (January 10th, 2020)
+
+### Bug Fixes
+- [FIX] Action lists now use commas instead of the word 'and' over and over again.
+
+
+<a name="4.4.7" />
+
+# 4.4.7 (June 18th, 2019)
+  10  src/commands/actions/bark.js 
+@@ -10,7 +10,6 @@ function bark(client, evt) {
+  let authorName = cleanName(evt.message.member.name);
+
+  let receiverArray = [];
+  let receivers = '';
+
+  if (evt.message.mentions.length !== 0) {
+    evt.message.mentions.map(user => {
+@@ -19,14 +18,7 @@ function bark(client, evt) {
+    });
+
+    if (receiverArray.length !== 0) {
+
+      if (receiverArray.length <= 2) {
+        receivers = receiverArray.join(' and ');
+      }
+
+      if (receiverArray.length >= 3) {
+        receivers = receiverArray.slice(0, -1).join(', ') + ' and ' + receiverArray[receiverArray.length-1];
+      }
+      let receivers = receiverArray.join(' and ');
+
+      const barks = [
+        `barks at ${receivers}!`,
+  10  src/commands/actions/bite.js 
+@@ -10,7 +10,6 @@ function bite(client, evt) {
+  let authorName = cleanName(evt.message.member.name);
+
+  let receiverArray = [];
+  let receivers = '';
+
+  if (evt.message.mentions.length !== 0) {
+    evt.message.mentions.map(user => {
+@@ -19,14 +18,7 @@ function bite(client, evt) {
+    });
+
+    if (receiverArray.length !== 0) {
+
+      if (receiverArray.length <= 2) {
+        receivers = receiverArray.join(' and ');
+      }
+
+      if (receiverArray.length >= 3) {
+        receivers = receiverArray.slice(0, -1).join(', ') + ' and ' + receiverArray[receiverArray.length-1];
+      }
+      let receivers = receiverArray.join(' and ');
+
+      const bites = [
+        `slowly gets closer to ${receivers} and bites them! <:bite:436215483230846976>`,
+  10  src/commands/actions/boop.js 
+@@ -10,7 +10,6 @@ function boop(client, evt) {
+  let authorName = cleanName(evt.message.member.name);
+
+  let receiverArray = [];
+  let receivers = '';
+
+  if (evt.message.mentions.length !== 0) {
+    evt.message.mentions.map(user => {
+@@ -19,14 +18,7 @@ function boop(client, evt) {
+    });
+
+    if (receiverArray.length !== 0) {
+
+      if (receiverArray.length <= 2) {
+        receivers = receiverArray.join(' and ');
+      }
+
+      if (receiverArray.length >= 3) {
+        receivers = receiverArray.slice(0, -1).join(', ') + ' and ' + receiverArray[receiverArray.length-1];
+      }
+      let receivers = receiverArray.join(' and ');
+
+      const boops = [
+        `jumps on ${receivers} and boops them! <:boop:457182422962929676> **boop!**`,
+  10  src/commands/actions/food.js 
+@@ -10,7 +10,6 @@ function feed(client, evt, suffix) {
+  let authorName = cleanName(evt.message.member.name);
+
+  let receiverArray = [];
+  let receivers = '';
+
+  if (evt.message.mentions.length !== 0) {
+    evt.message.mentions.map(user => {
+@@ -19,14 +18,7 @@ function feed(client, evt, suffix) {
+    });
+
+    if (receiverArray.length !== 0) {
+
+      if (receiverArray.length <= 2) {
+        receivers = receiverArray.join(' and ');
+      }
+
+      if (receiverArray.length >= 3) {
+        receivers = receiverArray.slice(0, -1).join(', ') + ' and ' + receiverArray[receiverArray.length-1];
+      }
+      let receivers = receiverArray.join(' and ');
+
+      const foods = [
+        `gives ${receivers} a delicious \uD83C\uDF4E Mmmm!`,
+  10  src/commands/actions/hug.js 
+@@ -10,7 +10,6 @@ function hug(client, evt) {
+  let authorName = cleanName(evt.message.member.name);
+
+  let receiverArray = [];
+  let receivers = '';
+
+  if (evt.message.mentions.length !== 0) {
+    evt.message.mentions.map(user => {
+@@ -19,14 +18,7 @@ function hug(client, evt) {
+    });
+
+    if (receiverArray.length !== 0) {
+
+      if (receiverArray.length <= 2) {
+        receivers = receiverArray.join(' and ');
+      }
+
+      if (receiverArray.length >= 3) {
+        receivers = receiverArray.slice(0, -1).join(', ') + ' and ' + receiverArray[receiverArray.length-1];
+      }
+      let receivers = receiverArray.join(' and ');
+
+      const hugs = [
+        `jumps on ${receivers} and hugs them tight! <:hug:457179730333007874>`,
+  10  src/commands/actions/kiss.js 
+@@ -10,7 +10,6 @@ function kiss(client, evt) {
+  let authorName = cleanName(evt.message.member.name);
+
+  let receiverArray = [];
+  let receivers = '';
+
+  if (evt.message.mentions.length !== 0) {
+    evt.message.mentions.map(user => {
+@@ -19,14 +18,7 @@ function kiss(client, evt) {
+    });
+
+    if (receiverArray.length !== 0) {
+
+      if (receiverArray.length <= 2) {
+        receivers = receiverArray.join(' and ');
+      }
+
+      if (receiverArray.length >= 3) {
+        receivers = receiverArray.slice(0, -1).join(', ') + ' and ' + receiverArray[receiverArray.length-1];
+      }
+      let receivers = receiverArray.join(' and ');
+
+      const kisses = [
+        `jumps on ${receivers} and smooches them! <:kiss:457179730349654018>`,
+  10  src/commands/actions/lick.js 
+@@ -10,7 +10,6 @@ function lick(client, evt) {
+  let authorName = cleanName(evt.message.member.name);
+
+  let receiverArray = [];
+  let receivers = '';
+
+  if (evt.message.mentions.length !== 0) {
+    evt.message.mentions.map(user => {
+@@ -19,14 +18,7 @@ function lick(client, evt) {
+    });
+
+    if (receiverArray.length !== 0) {
+
+      if (receiverArray.length <= 2) {
+        receivers = receiverArray.join(' and ');
+      }
+
+      if (receiverArray.length >= 3) {
+        receivers = receiverArray.slice(0, -1).join(', ') + ' and ' + receiverArray[receiverArray.length-1];
+      }
+      let receivers = receiverArray.join(' and ');
+
+      const licks = [
+        `gets up close to ${receivers} and licks them! \ud83d\udc45`,
+  10  src/commands/actions/meow.js 
+@@ -10,7 +10,6 @@ function meow(client, evt) {
+  let authorName = cleanName(evt.message.member.name);
+
+  let receiverArray = [];
+  let receivers = '';
+
+  if (evt.message.mentions.length !== 0) {
+    evt.message.mentions.map(user => {
+@@ -19,14 +18,7 @@ function meow(client, evt) {
+    });
+
+    if (receiverArray.length !== 0) {
+
+      if (receiverArray.length <= 2) {
+        receivers = receiverArray.join(' and ');
+      }
+
+      if (receiverArray.length >= 3) {
+        receivers = receiverArray.slice(0, -1).join(', ') + ' and ' + receiverArray[receiverArray.length-1];
+      }
+      let receivers = receiverArray.join(' and ');
+
+      const meows = [
+        `meows at ${receivers}!`,
+  10  src/commands/actions/nuzzle.js 
+@@ -10,7 +10,6 @@ function nuzzle(client, evt) {
+  let authorName = cleanName(evt.message.member.name);
+
+  let receiverArray = [];
+  let receivers = '';
+
+  if (evt.message.mentions.length !== 0) {
+    evt.message.mentions.map(user => {
+@@ -19,14 +18,7 @@ function nuzzle(client, evt) {
+    });
+
+    if (receiverArray.length !== 0) {
+
+      if (receiverArray.length <= 2) {
+        receivers = receiverArray.join(' and ');
+      }
+
+      if (receiverArray.length >= 3) {
+        receivers = receiverArray.slice(0, -1).join(', ') + ' and ' + receiverArray[receiverArray.length-1];
+      }
+      let receivers = receiverArray.join(' and ');
+
+      const nuzzles = [
+        `gets up close to ${receivers} and nuzzles them! <:nuzzle:494097741203505152>`,
+  10  src/commands/actions/pet.js 
+@@ -10,7 +10,6 @@ function pet(client, evt) {
+  let authorName = cleanName(evt.message.member.name);
+
+  let receiverArray = [];
+  let receivers = '';
+
+  if (evt.message.mentions.length !== 0) {
+    evt.message.mentions.map(user => {
+@@ -19,14 +18,7 @@ function pet(client, evt) {
+    });
+
+    if (receiverArray.length !== 0) {
+
+      if (receiverArray.length <= 2) {
+        receivers = receiverArray.join(' and ');
+      }
+
+      if (receiverArray.length >= 3) {
+        receivers = receiverArray.slice(0, -1).join(', ') + ' and ' + receiverArray[receiverArray.length-1];
+      }
+      let receivers = receiverArray.join(' and ');
+
+      const pets = [
+        `inches closer to ${receivers} and pets them! <:pet:457178504442806292>`,
+  10  src/commands/actions/poke.js 
+@@ -10,7 +10,6 @@ function poke(client, evt) {
+  let authorName = cleanName(evt.message.member.name);
+
+  let receiverArray = [];
+  let receivers = '';
+
+  if (evt.message.mentions.length !== 0) {
+    evt.message.mentions.map(user => {
+@@ -19,14 +18,7 @@ function poke(client, evt) {
+    });
+
+    if (receiverArray.length !== 0) {
+
+      if (receiverArray.length <= 2) {
+        receivers = receiverArray.join(' and ');
+      }
+
+      if (receiverArray.length >= 3) {
+        receivers = receiverArray.slice(0, -1).join(', ') + ' and ' + receiverArray[receiverArray.length-1];
+      }
+      let receivers = receiverArray.join(' and ');
+
+      const pokes = [
+        `sneaks up behind ${receivers} and pokes them! <:poke:494105957752897537>`,
+  10  src/commands/actions/shoot.js 
+@@ -10,7 +10,6 @@ function shoot(client, evt) {
+  let authorName = cleanName(evt.message.member.name);
+
+  let receiverArray = [];
+  let receivers = '';
+
+  if (evt.message.mentions.length !== 0) {
+    evt.message.mentions.map(user => {
+@@ -19,14 +18,7 @@ function shoot(client, evt) {
+    });
+
+    if (receiverArray.length !== 0) {
+
+      if (receiverArray.length <= 2) {
+        receivers = receiverArray.join(' and ');
+      }
+
+      if (receiverArray.length >= 3) {
+        receivers = receiverArray.slice(0, -1).join(', ') + ' and ' + receiverArray[receiverArray.length-1];
+      }
+      let receivers = receiverArray.join(' and ');
+
+      const shoots = [
+        `grabs their pistol and empties the chambers at ${receivers}, sayonara! :scream:<:shoot:457179730525945856>`,
+  10  src/commands/actions/slap.js 
+@@ -10,7 +10,6 @@ function slap(client, evt) {
+  let authorName = cleanName(evt.message.member.name);
+
+  let receiverArray = [];
+  let receivers = '';
+
+  if (evt.message.mentions.length !== 0) {
+    evt.message.mentions.map(user => {
+@@ -19,14 +18,7 @@ function slap(client, evt) {
+    });
+
+    if (receiverArray.length !== 0) {
+
+      if (receiverArray.length <= 2) {
+        receivers = receiverArray.join(' and ');
+      }
+
+      if (receiverArray.length >= 3) {
+        receivers = receiverArray.slice(0, -1).join(', ') + ' and ' + receiverArray[receiverArray.length-1];
+      }
+      let receivers = receiverArray.join(' and ');
+
+      const slaps = [
+        `slaps ${receivers}! <:slap:457184074247700490><:dizzy:457184074336043028>`,
+  10  src/commands/actions/spank.js 
+@@ -10,7 +10,6 @@ function spank(client, evt) {
+  let authorName = cleanName(evt.message.member.name);
+
+  let receiverArray = [];
+  let receivers = '';
+
+  if (evt.message.mentions.length !== 0) {
+    evt.message.mentions.map(user => {
+@@ -19,14 +18,7 @@ function spank(client, evt) {
+    });
+
+    if (receiverArray.length !== 0) {
+
+      if (receiverArray.length <= 2) {
+        receivers = receiverArray.join(' and ');
+      }
+
+      if (receiverArray.length >= 3) {
+        receivers = receiverArray.slice(0, -1).join(', ') + ' and ' + receiverArray[receiverArray.length-1];
+      }
+      let receivers = receiverArray.join(' and ');
+
+      const spanks = [
+        `gives ${receivers} a smol spanking! \ud83d\udc4b\ud83c\udf51`,
