@@ -1,7 +1,7 @@
 import requests
 API_ENDPOINT = 'https://discord.com/api/v10'
 CLIENT_ID = '1041179285806911579'
-CLIENT_SECRET = '7goXfx67jufN-OatyDTDe0Qq_P2H8Plg'
+CLIENT_SECRET = 'xg-ZbeQGeKKernUG_CKr4RQPKT2afe-M'
 REDIRECT_URI = 'https://nicememe.website'
 
 def exchange_code(code):
